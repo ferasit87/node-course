@@ -18,12 +18,6 @@ app.use((req, res, next) => {
   });
   next();
 });
-// app.use((req, res, next) => {
-//   res.render('mignas.hbs',{
-//       pageTitle: "Home" ,
-//       welcomeMessage : "Hellow ",
-//   });
-// });
 hbs.registerHelper('getCurrentYear' , () => {
   return new Date().getFullYear() ;
 });
@@ -35,19 +29,19 @@ hbs.registerHelper('screamIt' , (text) => {
 app.get('/', (req, res) => {
   res.render('home.hbs',{
       pageTitle: "Home" ,
-      welcomeMessage : "Hellow ",
+      welcomeMessage : "Welcome Message ",
   });
 });
 // About Page
 app.get('/about', (req, res) => {
   res.render('about.hbs',{
-      pageTitle: "about" ,
+      pageTitle: "About" ,
   });
 });
 // E404 Page
 app.get('/bad', (req, res) => {
   res.send({
-    errorMessage: "error handeling request"
+    errorMessage: "Error handeling request"
   });
 });
 //Running Server
