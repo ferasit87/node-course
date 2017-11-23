@@ -38,6 +38,12 @@ app.get('/about', (req, res) => {
       pageTitle: "About" ,
   });
 });
+// Projects Page
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs',{
+      pageTitle: "Projects" ,
+  });
+});
 // E404 Page
 app.get('/bad', (req, res) => {
   res.send({
